@@ -14,10 +14,11 @@ button{
 }
 
 input{
-    padding: 10px 95px;
+    padding: 10px 10px;
     outline: none;
-    border: none;
+    border: 1px solid #e6ecf0;
     margin-right: 10px;
+    width: 350px;
 }
 
 h1{
@@ -30,6 +31,7 @@ h1{
 .all{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .addTodo{
@@ -42,17 +44,25 @@ h1{
 
 h2{
     font-size: 24px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+
 }
 .lista{
     font-size: 18px;
     list-style: none;
+    margin-bottom: 10px;
+    background: #d6e7ec;
+    padding: 10px 30px;
+    text-align: center;
+    border-radius: 20px;
 }
-#add{
-    
-}
-.passar{
-    
-}
-.excluir{
-    
+
+.bloco{
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    margin-bottom: 10px;
 }
