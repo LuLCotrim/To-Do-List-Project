@@ -6,55 +6,75 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>To-Do List</title>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/3099c9805d.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>
-        TODO APP
-    </h1>
-    <input type="text" placeholder="Adcione um novo todo">
-    <button></button>
-    <div>
-        <div>
-            <h2>
-                TO DO
-            </h2>
-            <ul>
-                <li class="lista">
-                    Revisar HTML e CSS <button></button>
-                </li>
-                <li class="lista">
-                    Fazer o Todo App <button></button>
-                </li>
-                <li class="lista">
-                    Postar meu codigo no GitHub <Button></Button>
-                </li>
-                <li class="lista">
-                    Ir na aula de JS <button></button>
-                </li>
-            </ul>
+    <div >
+        <h1>TO-DO APP</h1>
+        <div class="addTodo">
+            <input type="text" placeholder="Adcione um novo to-do" id="">
+            <button id="add">
+                <i class="fas fa-plus-square" style="font-size: 40px"></i>
+            </button>
         </div>
-        <div>
-            <h2>
-                DOING
-            </h2>
-            <ul>
-                <li class="lista">
-                    Ir na aula de HTML e CSS <button></button>
-                </li>
-            </ul>
-        </div>
-        <div>
-            <h2>
-                DONE
-            </h2>
-            <ul>
-                <li class="lista">
-                    Ir a reunião de projetos <button></button>
-                </li>
-                <li class="lista">
-                    Ir na aula de GIT <button></button>
-                </li>
-            </ul>
+        <div class="all">
+            <div>
+                <h2>TO DO</h2>
+                <ul>
+                    <li class="lista">
+                        Revisar HTML e CSS
+                        <button class="passar">
+                            <i class="fas fa-chevron-circle-right" style="font-size: 18px"></i>
+                        </button>
+                    </li>
+                    <li class="lista">
+                        Fazer o Todo App 
+                        <button class="passar">
+                            <i class="fas fa-chevron-circle-right" style="font-size: 18px"></i>
+                        </button>
+                    </li>
+                    <li class="lista">
+                        Postar meu codigo no GitHub 
+                        <button class="passar">
+                            <i class="fas fa-chevron-circle-right" style="font-size: 18px"></i>
+                        </Button>
+                    </li>
+                    <li class="lista">
+                        Ir na aula de JS 
+                        <button class="passar">
+                            <i class="fas fa-chevron-circle-right" style="font-size: 18px"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2>DOING</h2>
+                <ul>
+                    <li class="lista">
+                        Ir na aula de HTML e CSS
+                        <button class="passar">
+                            <i class="fas fa-chevron-circle-right" style="font-size: 18px"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2>DONE</h2>
+                <ul>
+                    <li class="lista">
+                        Ir a reunião de projetos
+                        <button class="excluir">
+                            <i class="fas fa-times-circle" style="font-size: 18px"></i>
+                        </button>
+                    </li>
+                    <li class="lista">
+                        Ir na aula de GIT
+                        <button class="excluir">
+                            <i class="fas fa-times-circle" style="font-size: 18px"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </body>

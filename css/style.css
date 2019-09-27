@@ -1,14 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 body{
-    font-family: Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f0f0f0;
+}
+
+button{
+    border: none;
+    background: none;
+}
+
+input{
+    padding: 10px 95px;
+    outline: none;
+    border: none;
+    margin-right: 10px;
 }
 
 h1{
     font-size: 48px;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 50px;
 }
+
+.all{
+    display: flex;
+    justify-content: space-around;
+}
+
+.addTodo{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
 h2{
     font-size: 24px;
 }
 .lista{
     font-size: 18px;
     list-style: none;
+}
+#add{
+    
+}
+.passar{
+    
+}
+.excluir{
+    
 }
