@@ -28,6 +28,11 @@ const advance2 = (index) => {
     renderLists()
 }
 
+const deleteTodo = (index) => {
+    doneArray.splice(index)
+    renderLists()
+}
+
 const renderLists = () => {
     listaTodo.innerHTML = null
     listaDoing.innerHTML = null
@@ -84,6 +89,7 @@ const renderLists = () => {
     
         li.setAttribute('class', 'listElement')
 
+        bt.setAttribute('onclick', 'deleteTodo(' + doneArray.indexOf(element) + ')')
         bt.appendChild(icon)
 
         li.appendChild(textTodo)
@@ -94,4 +100,11 @@ const renderLists = () => {
 }
 
 renderLists()
+textBox.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        addButton.click();
+    }
+})
+
 addButton.onclick = addTodo
