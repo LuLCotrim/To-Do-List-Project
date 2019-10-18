@@ -1,25 +1,37 @@
 const addButton = document.getElementById('add')
-console.log(addButton)
 const textBox = document.getElementById('descTodo')
-const listaTodo = document.getElementsByClassName('list')
+const listaTodo = document.getElementById('list')
+
+let todoArray = []
+let doingArray = []
+let donerray = []
 
 function addTodo(){
-    const li = document.createElement('li')
-    const bt = document.createElement('button')
-    const icon = document.createElement('i')
-    let textTodo = documnet.createTextNode(textBox.value)
-
-    icon.setAttribute('class', 'fas fa-chevron-circle-right')
-    icon.setAttribute('style', 'font-size: 18px')
-    
-    li.setAttribute('class', 'listElement')
-
-    bt.appendChild(icon)
-
-    li.appendChild(bt)
-    li.appendChild(textTodo)
-
-    listaTodo.appendChild(li)
+    todoArray.push(textBox.value)
+    textBox.value = null
+    renderLists()
 }
 
-addButton.onclick = alert('dfdfd')
+const renderLists = () => {
+    listaTodo.innerHTML = null
+    todoArray.forEach(element => {
+        const li = document.createElement('li')
+        const bt = document.createElement('button')
+        const icon = document.createElement('i')
+        let textTodo = document.createTextNode(element)
+
+        icon.setAttribute('class', 'fas fa-chevron-circle-right')
+        icon.setAttribute('style', 'font-size: 18px')
+    
+        li.setAttribute('class', 'listElement')
+
+        bt.appendChild(icon)
+
+        li.appendChild(textTodo)
+        li.appendChild(bt)
+
+        listaTodo.appendChild(li)
+    });
+}
+
+addButton.onclick = addTodo
