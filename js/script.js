@@ -14,6 +14,20 @@ function addTodo(){
     renderLists()
 }
 
+const advance1 = (index) => {
+    let desc = todoArray[index]
+    doingArray.push(desc)
+    todoArray.splice(index)
+    renderLists()
+}
+
+const advance2 = (index) => {
+    let desc = doingArray[index]
+    doneArray.push(desc)
+    doingArray.splice(index)
+    renderLists()
+}
+
 const renderLists = () => {
     listaTodo.innerHTML = null
     listaDoing.innerHTML = null
@@ -23,13 +37,14 @@ const renderLists = () => {
         const li = document.createElement('li')
         const bt = document.createElement('button')
         const icon = document.createElement('i')
-        let textTodo = document.createTextNode(element)
+        let textTodo = document.createTextNode(element + ' ')
 
         icon.setAttribute('class', 'fas fa-chevron-circle-right')
         icon.setAttribute('style', 'font-size: 18px')
     
         li.setAttribute('class', 'listElement')
 
+        bt.setAttribute('onclick', 'advance1(' + todoArray.indexOf(element) + ')')
         bt.appendChild(icon)
 
         li.appendChild(textTodo)
@@ -42,13 +57,14 @@ const renderLists = () => {
         const li = document.createElement('li')
         const bt = document.createElement('button')
         const icon = document.createElement('i')
-        let textTodo = document.createTextNode(element)
+        let textTodo = document.createTextNode(element + ' ')
 
         icon.setAttribute('class', 'fas fa-chevron-circle-right')
         icon.setAttribute('style', 'font-size: 18px')
     
         li.setAttribute('class', 'listElement')
-
+        
+        bt.setAttribute('onclick', 'advance2(' + doingArray.indexOf(element) + ')')
         bt.appendChild(icon)
 
         li.appendChild(textTodo)
@@ -61,7 +77,7 @@ const renderLists = () => {
         const li = document.createElement('li')
         const bt = document.createElement('button')
         const icon = document.createElement('i')
-        let textTodo = document.createTextNode(element)
+        let textTodo = document.createTextNode(element + ' ')
 
         icon.setAttribute('class', 'fas fa-times-circle')
         icon.setAttribute('style', 'font-size: 18px')
@@ -73,7 +89,7 @@ const renderLists = () => {
         li.appendChild(textTodo)
         li.appendChild(bt)
 
-        listaDoing.appendChild(li)
+        listaDone.appendChild(li)
     })
 }
 
